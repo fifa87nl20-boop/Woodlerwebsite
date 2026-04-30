@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-nl="Woodler — Voor al uw vloeren | Vloerleggers Den Haag" data-en="Woodler — For all your floors | Floor Specialists The Hague">Woodler — Voor al uw vloeren | Vloerleggers Den Haag</title>
+    <meta name="description" content="Woodler is uw specialist in houten vloeren in Den Haag. Parket leggen, renoveren en onderhouden — met vakmanschap, eerlijke prijzen en 2 jaar garantie.">
+    <link rel="icon" type="image/png" href="images/IMG_2047-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+        <a href="index.html" class="logo">
+            <img src="images/IMG_2047-removebg-preview.png" alt="Woodler" class="logo-img">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" data-nl="Home" data-en="Home">Home</a></li>
+                <li><a href="diensten.html" data-nl="Diensten" data-en="Services">Diensten</a></li>
+                <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-toggle" id="langToggle" role="group" aria-label="Taal kiezen">
+            <button type="button" class="lang-opt active" data-lang="nl">NL</button>
+            <button type="button" class="lang-opt" data-lang="en">EN</button>
+        </div>
+        <a href="contact.html" class="nav-cta" data-nl="Gratis offerte" data-en="Free quote">Gratis offerte</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="7" x2="21" y2="7"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="17" x2="21" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<!-- ============ CALCULATOR (HERO) ============ -->
+<section class="calculator" id="calculator" style="padding-top: 220px; padding-bottom: 60px;">
+    <img class="hero-bg" src="images/hero.jpg" alt="" onerror="this.style.display='none'">
+    <div class="container calc-grid">
+        <div class="calc-info reveal">
+            <span class="eyebrow"
+                  data-nl="Vloerleggers · Den Haag"
+                  data-en="Floor specialists · The Hague">Vloerleggers · Den Haag</span>
+            <h2 data-nl="Vloeren die <em>warmte en stijl ademen.</em>"
+                data-en="Floors that <em>breathe warmth and style.</em>">Vloeren die <em>warmte en stijl ademen.</em></h2>
+            <p class="lead"
+               data-nl="Wij verkopen, leveren én leggen houten vloeren — met vakmanschap, eerlijke prijzen en oog voor detail. Bereken hieronder direct uw prijs."
+               data-en="We sell, deliver and install wooden floors — with craftsmanship, honest prices and an eye for detail. Calculate your price below.">Wij verkopen, leveren én leggen houten vloeren — met vakmanschap, eerlijke prijzen en oog voor detail. Bereken hieronder direct uw prijs.</p>
+            <div class="price-tag" data-nl="Parket schuren vanaf <strong>€19,95</strong> per m²" data-en="Parquet sanding from <strong>€19.95</strong> per m²">Parket schuren vanaf <strong>€19,95</strong> per m²</div>
+        </div>
+        <div class="calc-card reveal reveal-delay-1">
+            <div class="calc-header">
+                <div class="calc-title">
+                    <svg class="calc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M19 7 L28 3"/>
+                        <line x1="26" y1="2" x2="29" y2="5"/>
+                        <path d="M19 7 L15 16"/>
+                        <rect x="4" y="16" width="20" height="8" rx="2"/>
+                        <line x1="9" y1="19" x2="9" y2="21"/>
+                        <line x1="12" y1="19" x2="12" y2="21"/>
+                        <line x1="15" y1="19" x2="15" y2="21"/>
+                        <circle cx="9" cy="27" r="2.2"/>
+                        <circle cx="19" cy="27" r="2.2"/>
+                    </svg>
+                    <span data-nl="Schuurprijs <em>berekenen</em>" data-en="Sanding <em>price</em>">Schuurprijs <em>berekenen</em></span>
+                </div>
+                <div class="calc-sub" data-nl="Voor het schuren én afwerken van uw vloer. Voor leggen, renoveren of PVC: vraag een persoonlijke offerte aan." data-en="For sanding and finishing your floor. For installation, renovation or PVC: request a personal quote.">Voor het schuren én afwerken van uw vloer. Voor leggen, renoveren of PVC: vraag een persoonlijke offerte aan.</div>
+            </div>
+            <div class="calc-field">
+                <label for="calc-m2" data-nl="Aantal vierkante meters" data-en="Square meters">Aantal vierkante meters</label>
+                <input type="number" id="calc-m2" placeholder="bijv. 35" data-nl-placeholder="bijv. 35" data-en-placeholder="e.g. 35" min="1" max="500">
+            </div>
+            <div class="calc-field">
+                <label for="calc-finish" data-nl="Behandeling" data-en="Treatment">Behandeling</label>
+                <select id="calc-finish">
+                    <option value="13.5" data-nl="Olie naturel — €13,50/m²" data-en="Natural oil — €13.50/m²">Olie naturel — €13,50/m²</option>
+                    <option value="15.5" data-nl="Olie kleur — €15,50/m²" data-en="Coloured oil — €15.50/m²">Olie kleur — €15,50/m²</option>
+                    <option value="15.5" data-nl="Hardwax naturel — €15,50/m²" data-en="Hardwax natural — €15.50/m²">Hardwax naturel — €15,50/m²</option>
+                    <option value="17.5" data-nl="Hardwax kleur — €17,50/m²" data-en="Hardwax coloured — €17.50/m²">Hardwax kleur — €17,50/m²</option>
+                    <option value="18.5" data-nl="Lak naturel — €18,50/m²" data-en="Natural lacquer — €18.50/m²">Lak naturel — €18,50/m²</option>
+                    <option value="21.5" data-nl="Lak invisible — €21,50/m²" data-en="Invisible lacquer — €21.50/m²">Lak invisible — €21,50/m²</option>
+                    <option value="25.5" data-nl="Lak kleur — €25,50/m²" data-en="Coloured lacquer — €25.50/m²">Lak kleur — €25,50/m²</option>
+                </select>
+            </div>
+            <div class="calc-result">
+                <div class="label" data-nl="Totaal incl. BTW" data-en="Total incl. VAT">Totaal incl. BTW</div>
+                <div class="amount" id="calc-amount">€ 0,00</div>
+                <div class="note" data-nl="Indicatieprijs — exacte offerte na gratis inspectie." data-en="Indicative price — exact quote after free inspection.">Indicatieprijs — exacte offerte na gratis inspectie.</div>
+            </div>
+            <a href="https://wa.me/31641265060" class="btn btn-whatsapp" style="width: 100%; margin-top: 18px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" fill="none"/>
+                    <path d="M8.5 9.5c0-.5.4-1 1-1h.5l1 2.5-1 1c.5 1 1.5 2 2.5 2.5l1-1 2.5 1v.5c0 .6-.5 1-1 1-3.5 0-7-3.5-7-7z" fill="currentColor" stroke="none"/>
+                </svg>
+                <span data-nl="Vraag offerte aan" data-en="Request a quote">Vraag offerte aan</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WELKOM BIJ WOODLER ============ -->
+<section style="padding-bottom: 50px;">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow" data-nl="Meesters in houten vloeren" data-en="Masters in wooden floors">Meesters in houten vloeren</span>
+            <h2 data-nl="Welkom bij Woodler." data-en="Welcome to Woodler.">Welkom bij Woodler.</h2>
+            <p class="lead" data-nl="Bij Woodler draait alles om vakmanschap, duurzaamheid en liefde voor hout. Wij leggen nieuwe vloeren, renoveren versleten parket, vullen kieren en geven uw vloer de afwerking die hij verdient." data-en="At Woodler everything revolves around craftsmanship, durability and a love for wood. We install new floors, renovate worn parquet, fill gaps and give your floor the finish it deserves.">Bij Woodler draait alles om vakmanschap, duurzaamheid en liefde voor hout. Wij leggen nieuwe vloeren, renoveren versleten parket, vullen kieren en geven uw vloer de afwerking die hij verdient.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <img src="images/zebra-vloer.jpg" alt="Eikenhouten vloer in stijlvol interieur" loading="lazy">
+            <img src="images/visgraat-vloer.jpg" alt="Visgraat parket gelegd" loading="lazy">
+            <img src="images/IMG_1562.jpg" alt="Houten vloer project" loading="lazy">
+            <img src="images/result_IMG_1436-2-559x1024.jpg" alt="Houten vloer detail" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ============ ZO WERKEN WIJ ============ -->
+<section class="steps" style="padding-top: 50px;">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow eyebrow-pill" data-nl="Zo werken wij" data-en="How we work">Zo werken wij</span>
+            <h2 data-nl="Onze Werkwijze" data-en="Our Process">Onze Werkwijze</h2>
+            <p class="lead" data-nl="Van eerste contact tot een prachtig eindresultaat — in vier overzichtelijke stappen." data-en="From first contact to a beautiful end result — in four clear steps.">Van eerste contact tot een prachtig eindresultaat — in vier overzichtelijke stappen.</p>
+        </div>
+        <div class="steps-flow">
+            <div class="step-flow reveal">
+                <div class="step-circle-wrap">
+                    <div class="step-circle">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                </div>
+                <h3 data-nl="Contact &amp; Advies" data-en="Contact &amp; Advice">Contact &amp; Advies</h3>
+                <p data-nl="U neemt contact op en wij plannen een gratis adviesgesprek bij u thuis." data-en="You get in touch and we schedule a free consultation at your home.">U neemt contact op en wij plannen een gratis adviesgesprek bij u thuis.</p>
+            </div>
+            <div class="step-flow reveal reveal-delay-1">
+                <div class="step-circle-wrap">
+                    <div class="step-circle">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                    </div>
+                </div>
+                <h3 data-nl="Offerte op Maat" data-en="Tailored Quote">Offerte op Maat</h3>
+                <p data-nl="U ontvangt een heldere offerte zonder verborgen kosten." data-en="You receive a clear quote with no hidden costs.">U ontvangt een heldere offerte zonder verborgen kosten.</p>
+            </div>
+            <div class="step-flow reveal reveal-delay-2">
+                <div class="step-circle-wrap">
+                    <div class="step-circle">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                </div>
+                <h3 data-nl="Vakkundige Uitvoering" data-en="Expert Execution">Vakkundige Uitvoering</h3>
+                <p data-nl="Onze vakmensen voeren het werk netjes en efficiënt uit." data-en="Our craftsmen carry out the work neatly and efficiently.">Onze vakmensen voeren het werk netjes en efficiënt uit.</p>
+            </div>
+            <div class="step-flow reveal reveal-delay-3">
+                <div class="step-circle-wrap">
+                    <div class="step-circle">4</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+                <h3 data-nl="Tevreden Klant" data-en="Satisfied Client">Tevreden Klant</h3>
+                <p data-nl="Wij leveren pas op als u 100% tevreden bent met het resultaat." data-en="We only deliver once you're 100% satisfied with the result.">Wij leveren pas op als u 100% tevreden bent met het resultaat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ DE VOORDELEN ============ -->
+<section class="advantages">
+    <div class="container">
+        <div class="advantage-card reveal">
+            <div class="advantage-img">
+                <img src="images/IMG_1965-1024x768.jpg" alt="Vakman aan het werk met schuurmachine" loading="lazy">
+            </div>
+            <div class="advantage-content">
+                <h2 class="advantage-title" data-nl="De voordelen van kiezen voor Woodler" data-en="The benefits of choosing Woodler">De voordelen van kiezen voor Woodler</h2>
+                <div class="advantage-feature">
+                    <h3 data-nl="Gespecialiseerd vakmanschap" data-en="Specialised craftsmanship">Gespecialiseerd vakmanschap</h3>
+                    <p data-nl="Wij leggen, renoveren en behandelen houten vloeren — en dát is onze focus. Geen bijzaak, maar puur ambacht." data-en="We install, renovate and treat wooden floors — that's our focus. Not a side job, but pure craftsmanship.">Wij leggen, renoveren en behandelen houten vloeren — en dát is onze focus. Geen bijzaak, maar puur ambacht.</p>
+                </div>
+                <div class="advantage-feature">
+                    <h3 data-nl="Eerlijke prijzen zonder verrassingen" data-en="Honest prices, no surprises">Eerlijke prijzen zonder verrassingen</h3>
+                    <p data-nl="U krijgt vooraf een heldere offerte. Wat we afspreken is wat u betaalt — eerlijk en duidelijk." data-en="You receive a clear quote upfront. What we agree is what you pay — honest and straightforward.">U krijgt vooraf een heldere offerte. Wat we afspreken is wat u betaalt — eerlijk en duidelijk.</p>
+                </div>
+                <a href="contact.html" class="btn advantage-cta" data-nl="Offerte aanvragen" data-en="Request a quote">Offerte aanvragen</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ELKE VLOER TOT LEVEN ============ -->
+<section class="amber-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2 data-nl="Bij Woodler brengen we elke vloer tot leven." data-en="At Woodler we bring every floor to life.">Bij Woodler brengen we elke vloer tot leven.</h2>
+            <p class="lead" data-nl="Of het nu gaat om een eeuwenoud eikenhouten parket of een moderne PVC-vloer — wij hebben het oog en de hand om er het maximum uit te halen. Met respect voor het materiaal en aandacht voor detail." data-en="Whether it's a centuries-old oak parquet or a modern PVC floor — we have the eye and the skill to get the most out of it. With respect for the material and attention to detail.">Of het nu gaat om een eeuwenoud eikenhouten parket of een moderne PVC-vloer — wij hebben het oog en de hand om er het maximum uit te halen. Met respect voor het materiaal en aandacht voor detail.</p>
+        </div>
+
+        <div class="two-up">
+            <div class="img-wrap reveal">
+                <img src="images/VERLIJMD-1-1-1024x683.jpg" alt="Verlijmd parket" loading="lazy">
+            </div>
+            <div class="img-wrap reveal reveal-delay-1">
+                <img src="images/leggen-houten-vloer-op-vloerverwarming-jpg-1024x768-2.jpg" alt="Vloer op vloerverwarming" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ VLOERLEGGEN AMBACHT ============ -->
+<section class="advantages">
+    <div class="container">
+        <div class="advantage-card reveal">
+            <div class="advantage-img">
+                <img src="images/MG_3974.jpg" alt="Vloerleggen ambacht" loading="lazy">
+            </div>
+            <div class="advantage-content">
+                <span class="eyebrow" data-nl="Ambacht" data-en="Craft">Ambacht</span>
+                <h2 class="advantage-title" data-nl="Vloerleggen is bij ons een ambacht — geen bijzaak." data-en="Floor laying is a craft to us — never a side job.">Vloerleggen is bij ons een ambacht — geen bijzaak.</h2>
+                <div class="advantage-feature">
+                    <p data-nl="Met meer dan tien jaar ervaring controleren wij de ondergrond, plaatsen wij elke plank met precisie en werken wij alleen met materialen die hun kwaliteit bewezen hebben. Het resultaat: een vloer die generaties meegaat." data-en="With more than ten years of experience we check the substrate, place every plank with precision and work only with materials that have proven their quality. The result: a floor that lasts generations.">Met meer dan tien jaar ervaring controleren wij de ondergrond, plaatsen wij elke plank met precisie en werken wij alleen met materialen die hun kwaliteit bewezen hebben. Het resultaat: een vloer die generaties meegaat.</p>
+                </div>
+                <a href="diensten.html" class="btn advantage-cta" data-nl="Bekijk onze diensten" data-en="View our services">Bekijk onze diensten</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ VOOR EN NA ============ -->
+<section class="before-after">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow" data-nl="Voor &amp; na" data-en="Before &amp; after">Voor &amp; na</span>
+            <h2 data-nl="Hier ziet u het resultaat van een renovatie." data-en="See the result of a renovation here.">Hier ziet u het resultaat van een renovatie.</h2>
+            <p class="lead" data-nl="Sleep de balk om het verschil te zien. Vloeren met geschiedenis krijgen een tweede leven — met respect voor het origineel." data-en="Drag the slider to see the difference. Floors with history get a second life — with respect for the original.">Sleep de balk om het verschil te zien. Vloeren met geschiedenis krijgen een tweede leven — met respect voor het origineel.</p>
+        </div>
+        <div class="ba-wrap reveal" id="baWrap">
+            <span class="ba-label before" data-nl="Vóór" data-en="Before">Vóór</span>
+            <span class="ba-label after" data-nl="Na" data-en="After">Na</span>
+            <img class="ba-img ba-before" src="images/voor-renovatie.jpg" alt="Vloer vóór renovatie">
+            <img class="ba-img ba-after" id="baAfter" src="images/na-renovatie.jpg" alt="Vloer na renovatie">
+            <div class="ba-handle" id="baHandle"></div>
+        </div>
+        <p class="center mt-md" style="color: rgba(251, 246, 239, 0.8); max-width: 720px; margin: 32px auto 0;" data-nl="Bij Woodler brengen we hout tot leven. Met vakmanschap, oog voor detail en liefde voor parket leveren en leggen we vloeren die generaties meegaan." data-en="At Woodler we bring wood to life. With craftsmanship, an eye for detail and a love for parquet, we supply and install floors that last generations.">Bij Woodler brengen we hout tot leven. Met vakmanschap, oog voor detail en liefde voor parket leveren en leggen we vloeren die generaties meegaan.</p>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-banner">
+    <div class="container reveal">
+        <h2 data-nl="Klaar voor uw <em>nieuwe vloer</em>?" data-en="Ready for your <em>new floor</em>?">Klaar voor uw <em>nieuwe vloer</em>?</h2>
+        <p class="lead" data-nl="Vraag vrijblijvend een offerte aan en ontdek wat een echte vakman voor uw woning kan betekenen." data-en="Request a quote with no obligation and discover what a true craftsman can do for your home.">Vraag vrijblijvend een offerte aan en ontdek wat een echte vakman voor uw woning kan betekenen.</p>
+        <div class="cta-actions">
+            <a href="contact.html" class="btn" data-nl="Plan uw gratis inspectie" data-en="Book your free inspection">Plan uw gratis inspectie</a>
+            <a href="tel:0641265060" class="btn btn-secondary" data-nl="Bel: 06-41265060" data-en="Call: 06-41265060">Bel: 06-41265060</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <img src="images/IMG_2047-removebg-preview.png" alt="Woodler" style="height: 110px; width: auto; display: block;">
+                <p class="footer-brand-text" data-nl="Bij Woodler brengen we hout tot leven. Met vakmanschap, oog voor detail en liefde voor parket leveren en leggen we vloeren die generaties meegaan." data-en="At Woodler we bring wood to life. With craftsmanship, an eye for detail and a love for parquet, we supply and install floors that last generations.">Bij Woodler brengen we hout tot leven. Met vakmanschap, oog voor detail en liefde voor parket leveren en leggen we vloeren die generaties meegaan.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 data-nl="Diensten" data-en="Services">Diensten</h4>
+                <ul>
+                    <li><a href="diensten.html" data-nl="Parket Leggen" data-en="Parquet Installation">Parket Leggen</a></li>
+                    <li><a href="diensten.html" data-nl="Parket Renovatie" data-en="Parquet Renovation">Parket Renovatie</a></li>
+                    <li><a href="diensten.html" data-nl="Parket Onderhoud" data-en="Parquet Maintenance">Parket Onderhoud</a></li>
+                    <li><a href="diensten.html" data-nl="PVC Vloeren" data-en="PVC Flooring">PVC Vloeren</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 data-nl="Navigatie" data-en="Navigation">Navigatie</h4>
+                <ul>
+                    <li><a href="index.html" data-nl="Home" data-en="Home">Home</a></li>
+                    <li><a href="diensten.html" data-nl="Diensten" data-en="Services">Diensten</a></li>
+                    <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 data-nl="Contact" data-en="Contact">Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <div>
+                            <div class="label" data-nl="Adres" data-en="Address">Adres</div>
+                            <div class="value">Wibo Lanslaan 30, 2493AL Den Haag</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                        <div>
+                            <div class="label" data-nl="Telefoon" data-en="Phone">Telefoon</div>
+                            <div class="value"><a href="tel:0641265060">06-41265060</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                        <div>
+                            <div class="label" data-nl="E-mail" data-en="Email">E-mail</div>
+                            <div class="value"><a href="mailto:info@woodler.nl">info@woodler.nl</a></div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://wa.me/31641265060" class="footer-whatsapp">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span data-nl="WhatsApp ons" data-en="Message us on WhatsApp">WhatsApp ons</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div data-nl="© 2026 Woodler. Alle rechten voorbehouden." data-en="© 2026 Woodler. All rights reserved.">© 2026 Woodler. Alle rechten voorbehouden.</div>
+            <div class="footer-trust">
+                <span><span class="check">✓</span> <span data-nl="2 jaar garantie" data-en="2-year warranty">2 jaar garantie</span></span>
+                <span><span class="check">✓</span> <span data-nl="100% tevreden" data-en="100% satisfied">100% tevreden</span></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/31641265060" class="whatsapp-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
