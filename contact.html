@@ -149,30 +149,39 @@
                 </div>
             </div>
 
-            <form class="form-card reveal reveal-delay-1" id="contactForm" onsubmit="return false;">
+            <form class="form-card reveal reveal-delay-1" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms, dezelfde koppeling en hetzelfde postvak als de Ads-lander van Woodler.
+                     Het onderwerp verschilt, zodat je in de mail ziet waar de aanvraag vandaan komt.
+                     Stond hier tot 09-09-2026 onsubmit="return false;": het formulier deed toen niets
+                     en er is nooit een aanvraag aangekomen. -->
+                <input type="hidden" name="access_key" value="8101bb69-6192-44f1-a4a1-319d883c004a">
+                <input type="hidden" name="subject" value="Nieuwe offerteaanvraag via woodler.nl (contactformulier)">
+                <input type="hidden" name="from_name" value="woodler.nl">
+                <!-- Honeypot: bots vullen dit veld, bezoekers zien het niet. Web3Forms gooit die inzendingen weg. -->
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <span class="eyebrow" data-nl="Offerte aanvragen" data-en="Request a quote">Offerte aanvragen</span>
                 <h3 data-nl="Vertel ons over uw vloer" data-en="Tell us about your floor">Vertel ons over uw vloer</h3>
                 <p class="lead" data-nl="Vul het formulier in en wij nemen binnen 24 uur contact met u op." data-en="Fill in the form and we'll get back to you within 24 hours.">Vul het formulier in en wij nemen binnen 24 uur contact met u op.</p>
 
                 <div class="form-row">
                     <div class="field">
-                        <input type="text" id="f-name" placeholder=" " required>
+                        <input type="text" id="f-name" name="Naam" placeholder=" " required autocomplete="name">
                         <label for="f-name" data-nl="Uw naam" data-en="Your name">Uw naam</label>
                     </div>
                     <div class="field">
-                        <input type="tel" id="f-phone" placeholder=" " required>
+                        <input type="tel" id="f-phone" name="Telefoon" placeholder=" " required autocomplete="tel">
                         <label for="f-phone" data-nl="Telefoonnummer" data-en="Phone number">Telefoonnummer</label>
                     </div>
                 </div>
 
                 <div class="field">
-                    <input type="email" id="f-email" placeholder=" " required>
+                    <input type="email" id="f-email" name="E-mail" placeholder=" " required autocomplete="email">
                     <label for="f-email" data-nl="E-mailadres" data-en="Email address">E-mailadres</label>
                 </div>
 
                 <div class="form-row">
                     <div class="field">
-                        <select id="f-service" required>
+                        <select id="f-service" name="Dienst" required>
                             <option value="" disabled selected hidden></option>
                             <option data-nl="Parket leggen" data-en="Parquet installation">Parket leggen</option>
                             <option data-nl="Parket renoveren" data-en="Parquet renovation">Parket renoveren</option>
@@ -183,18 +192,28 @@
                         <label for="f-service" data-nl="Dienst" data-en="Service">Dienst</label>
                     </div>
                     <div class="field">
-                        <input type="number" id="f-m2" placeholder=" " min="1">
+                        <input type="number" id="f-m2" name="Aantal m2" placeholder=" " min="1">
                         <label for="f-m2" data-nl="Aantal m² (indicatie)" data-en="Square meters (estimate)">Aantal m² (indicatie)</label>
                     </div>
                 </div>
 
                 <div class="field">
-                    <textarea id="f-message" placeholder=" " rows="5"></textarea>
+                    <textarea id="f-message" name="Bericht" placeholder=" " rows="5"></textarea>
                     <label for="f-message" data-nl="Uw bericht (optioneel)" data-en="Your message (optional)">Uw bericht (optioneel)</label>
                 </div>
 
                 <button type="submit" class="btn btn-primary" data-nl="Verstuur aanvraag" data-en="Send request">Verstuur aanvraag</button>
+                <p class="form-error" id="formError" hidden
+                   data-nl="Het versturen lukte niet. Bel of app ons op <a href=&quot;tel:0641265060&quot;>06 41 26 50 60</a> of mail naar <a href=&quot;mailto:info@woodler.nl&quot;>info@woodler.nl</a>."
+                   data-en="Sending failed. Call or message us on <a href=&quot;tel:0641265060&quot;>+31 6 41 26 50 60</a> or email <a href=&quot;mailto:info@woodler.nl&quot;>info@woodler.nl</a>.">Het versturen lukte niet. Bel of app ons op <a href="tel:0641265060">06 41 26 50 60</a> of mail naar <a href="mailto:info@woodler.nl">info@woodler.nl</a>.</p>
                 <p style="font-size: 0.82rem; color: var(--c-muted); text-align: center; margin-top: 14px;" data-nl="Wij reageren binnen 24 uur — vaak sneller." data-en="We respond within 24 hours — often sooner.">Wij reageren binnen 24 uur — vaak sneller.</p>
+                <div class="form-success" id="formSuccess" hidden>
+                    <div class="form-success__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h3 data-nl="Bedankt, uw aanvraag is bij ons binnen" data-en="Thank you, we have your request">Bedankt, uw aanvraag is bij ons binnen</h3>
+                    <p data-nl="Wij nemen binnen 24 uur contact met u op. Heeft u haast? Bel gerust 06 41 26 50 60." data-en="We will get back to you within 24 hours. In a hurry? Call us on +31 6 41 26 50 60.">Wij nemen binnen 24 uur contact met u op. Heeft u haast? Bel gerust 06 41 26 50 60.</p>
+                </div>
             </form>
 
         </div>

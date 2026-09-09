@@ -161,23 +161,47 @@
         sel.addEventListener('change', update);
     });
 
-    // ---------- Form submit (placeholder) ----------
+    // ---------- Contactformulier versturen (Web3Forms) ----------
+    // Hier stond tot 09-09-2026 een placeholder: de knop zei "Bedankt! We nemen contact op"
+    // en het formulier werd geleegd, maar er ging niets de deur uit. Nu gaat de aanvraag naar
+    // Web3Forms, hetzelfde postvak als de Ads-lander van Woodler. Web3Forms wil de aanroep
+    // vanuit de browser hebben, vandaar deze fetch en geen gewone formulierpost.
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        const success = document.getElementById('formSuccess');
+        const error = document.getElementById('formError');
+        const button = contactForm.querySelector('button[type="submit"]');
         contactForm.addEventListener('submit', (e) => {
+            // De browser controleert de verplichte velden voor dit punt, dus hier is alles ingevuld.
             e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const original = btn.textContent;
-            btn.textContent = 'Bedankt! We nemen contact op ✓';
-            btn.style.background = 'var(--c-amber)';
-            btn.style.color = 'var(--c-wood)';
-            setTimeout(() => {
-                btn.textContent = original;
-                btn.style.background = '';
-                btn.style.color = '';
-                contactForm.reset();
-                document.querySelectorAll('.field select').forEach(s => s.classList.remove('has-value'));
-            }, 3500);
+            const originalHTML = button.innerHTML;
+            button.disabled = true;
+            button.textContent = document.documentElement.lang === 'en' ? 'Sending...' : 'Versturen...';
+            if (error) error.hidden = true;
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { Accept: 'application/json' }
+            })
+                .then(r => r.json())
+                .then(res => {
+                    if (!res.success) throw new Error(res.message || 'mislukt');
+                    contactForm.classList.add('is-submitted');
+                    if (success) {
+                        success.hidden = false;
+                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                })
+                .catch(() => {
+                    // Geen alert en geen leeg formulier: het telefoonnummer komt in beeld en
+                    // wat de bezoeker heeft ingevuld blijft staan, zodat hij het opnieuw kan proberen.
+                    button.disabled = false;
+                    button.innerHTML = originalHTML;
+                    if (error) {
+                        error.hidden = false;
+                        error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
         });
     }
 
