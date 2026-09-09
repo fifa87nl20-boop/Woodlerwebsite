@@ -17,3 +17,6 @@ desktop.ini
 
 # Local server scratch
 /tmp/
+
+# Vercel
+.vercel/
