@@ -19,10 +19,10 @@
 
   var AW = 'AW-18137028329';
   var LABELS = {
-    bel: '',      /* Hoofdwebsite - Bel klik */
-    whatsapp: '', /* Hoofdwebsite - WhatsApp klik */
-    mail: '',     /* Hoofdwebsite - Mail klik */
-    offerte: ''   /* Hoofdwebsite - Offerte formulier */
+    bel: 'mQA6CNia7YIdEOmttMhD',      /* Hoofdwebsite - Bel klik */
+    whatsapp: 'FJPRCNua7YIdEOmttMhD', /* Hoofdwebsite - WhatsApp klik */
+    mail: 'sDFWCN6a7YIdEOmttMhD',     /* Hoofdwebsite - Mail klik */
+    offerte: 'V7_pCOGa7YIdEOmttMhD'   /* Hoofdwebsite - Offerte formulier */
   };
   var SLEUTEL = 'woodler_consent', GELDIG = 365 * 864e5;
   var EIGEN_TEL = ['tel:0641265060', 'tel:+31641265060'];

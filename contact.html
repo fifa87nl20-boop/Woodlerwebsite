@@ -142,12 +142,15 @@
                     </dl>
                 </div>
 
-                <div class="map-wrap-small">
-                    <iframe
-                        src="https://www.google.com/maps?q=Wibo+Lanslaan+30,+2493AL+Den+Haag&output=embed"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Locatie Woodler"></iframe>
+                <!-- Kaart pas na een klik (js/main.js voegt de iframe dan in): voor die klik gaat er
+                     vanaf deze pagina geen enkel verzoek naar Google. -->
+                <div class="map-wrap-small map-gate" data-map-src="https://www.google.com/maps?q=Wibo+Lanslaan+30,+2493AL+Den+Haag&output=embed" data-map-title="Locatie Woodler">
+                    <div class="map-gate__inner">
+                        <p class="map-gate__adres">Wibo Lanslaan 30, 2493AL Den Haag</p>
+                        <p class="map-gate__tekst" data-nl="De kaart van Google Maps laadt pas na uw klik. Google plaatst dan eigen cookies." data-en="The Google Maps map loads only after you click. Google then sets its own cookies.">De kaart van Google Maps laadt pas na uw klik. Google plaatst dan eigen cookies.</p>
+                        <button type="button" class="btn btn-primary map-gate__knop" data-map-laden data-nl="Kaart laden" data-en="Load map">Kaart laden</button>
+                        <a class="map-gate__link" href="https://www.google.com/maps?q=Wibo+Lanslaan+30,+2493AL+Den+Haag" target="_blank" rel="noopener" data-nl="Open in Google Maps" data-en="Open in Google Maps">Open in Google Maps</a>
+                    </div>
                 </div>
             </div>
 
@@ -323,7 +326,7 @@
     </svg>
 </a>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20260923"></script>
 <script src="js/cookiebanner.js?v=20260923" defer></script>
 </body>
 </html>

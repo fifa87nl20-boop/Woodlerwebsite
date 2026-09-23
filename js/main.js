@@ -211,3 +211,23 @@
     }
 
 })();
+
+// ---------- Kaart pas na een klik (contact.html) ----------
+// Voor de klik staat de Google Maps-URL alleen als tekst in data-map-src: geen verzoek naar Google.
+(function () {
+    'use strict';
+    document.querySelectorAll('.map-gate[data-map-src]').forEach((wrap) => {
+        const knop = wrap.querySelector('[data-map-laden]');
+        if (!knop) return;
+        knop.addEventListener('click', () => {
+            const f = document.createElement('iframe');
+            f.src = wrap.dataset.mapSrc;
+            f.loading = 'lazy';
+            f.referrerPolicy = 'no-referrer-when-downgrade';
+            f.title = wrap.dataset.mapTitle || 'Locatie Woodler';
+            wrap.replaceChildren(f);
+            wrap.classList.add('is-geladen');
+            f.focus();
+        });
+    });
+})();
