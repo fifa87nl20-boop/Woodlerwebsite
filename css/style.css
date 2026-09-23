@@ -2159,3 +2159,84 @@ section {
 .center { text-align: center; }
 .mt-sm { margin-top: 16px; }
 .mt-md { margin-top: 32px; }
+
+/* ============ COOKIEBANNER (js/cookiebanner.js) ============ */
+.ckb {
+    position: fixed;
+    left: 24px; bottom: 24px;
+    z-index: 1000;
+    width: min(560px, calc(100vw - 48px));
+    background: linear-gradient(var(--c-amber), var(--c-amber)) top / 100% 4px no-repeat, var(--c-white);
+    color: var(--c-charcoal);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    font-family: var(--font-body);
+}
+.ckb__in { padding: 26px 24px 24px; }
+.ckb__titel {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--c-wood);
+    margin: 0 0 0.5rem;
+}
+.ckb__tekst { margin: 0 0 1rem; font-size: 0.92rem; line-height: 1.55; color: var(--c-muted); }
+.ckb__cats { display: grid; gap: 0.6rem; margin: 0 0 1.1rem; }
+.ckb__cats[hidden] { display: none; }
+.ckb__cat {
+    display: flex; gap: 0.75rem; align-items: flex-start;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.ckb__cat input { width: 20px; height: 20px; margin: 0.15rem 0 0; accent-color: var(--c-wood); flex: none; }
+.ckb__cat b { display: block; font-size: 0.92rem; color: var(--c-wood); }
+.ckb__cat small { display: block; color: var(--c-muted); font-size: 0.83rem; line-height: 1.45; margin-top: 0.15rem; }
+.ckb__knoppen { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.ckb__knoppen > * { flex: 1 1 150px; }
+.ckb__knoppen .btn { padding: 14px 22px; font-size: 0.93rem; }
+.ckb__knop {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 22px;
+    border-radius: 999px; border: 0;
+    cursor: pointer;
+    font-family: inherit; font-weight: 500; font-size: 0.93rem; line-height: 1;
+    white-space: nowrap;
+    background: transparent;
+    color: var(--c-wood);
+    box-shadow: inset 0 0 0 1.5px var(--c-wood);
+    transition: background 0.2s;
+}
+.ckb__knop:hover { background: var(--c-cream-warm); }
+.ckb :focus-visible { outline: 3px solid var(--c-amber); outline-offset: 3px; }
+.footer-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.footer-legal a { color: rgba(251, 246, 239, 0.85); text-decoration: underline; text-underline-offset: 3px; }
+.footer-legal a:hover, .footer-legal a:focus-visible { color: var(--c-amber); }
+/* Zolang de banner er staat (cookiebanner.js): --ckb-ruimte is de hoogte die hij onderin
+   afdekt. Gefocuste elementen scrollen boven de banner in beeld en de footer loopt zo ver
+   door dat ook de laatste links erboven komen. */
+html.ckb-open { scroll-padding-bottom: var(--ckb-ruimte, 0px); scroll-padding-top: calc(var(--ckb-boven, 120px) + 8px + env(safe-area-inset-top)); }
+html.ckb-open .site-footer::after { content: ""; display: block; height: var(--ckb-ruimte, 0px); }
+@media (max-width: 639.98px) {
+    .ckb { left: 0; bottom: 0; width: 100%; border-radius: var(--radius) var(--radius) 0 0; max-height: 75vh; overflow: auto; }
+    .ckb__in { padding: 22px 16px calc(20px + env(safe-area-inset-bottom)); }
+    /* De zwevende WhatsApp-knop ligt op smalle schermen geheel onder de banner en doet dan
+       niet mee in de Tab-volgorde; de WhatsApp-links in de pagina blijven bereikbaar. */
+    html.ckb-open .whatsapp-float { visibility: hidden; }
+}
+/* Lage schermen (kleine of liggende telefoon): compacte banner, en de kopbalk scrolt mee zolang
+   de banner er staat, zodat een gefocust element altijd vrij in beeld kan komen. */
+@media (max-height: 640px), (max-width: 379.98px) {
+    html.ckb-open { scroll-padding-top: calc(8px + env(safe-area-inset-top)); }
+    html.ckb-open .site-header { position: absolute; }
+    .ckb { max-height: 75vh; overflow: auto; }
+    .ckb__in { padding: 16px 14px calc(14px + env(safe-area-inset-bottom)); }
+    .ckb__titel { font-size: 1.35rem; margin-bottom: 0.35rem; }
+    .ckb__tekst { font-size: 0.86rem; line-height: 1.45; margin-bottom: 0.8rem; }
+    .ckb__cats { gap: 0.45rem; margin-bottom: 0.8rem; }
+    .ckb__knoppen { gap: 0.5rem; }
+    .ckb__knoppen .btn { flex-basis: 100%; padding: 12px 18px; }
+    .ckb__knop { flex: 1 1 40%; padding: 11px 12px; font-size: 0.88rem; white-space: normal; }
+}

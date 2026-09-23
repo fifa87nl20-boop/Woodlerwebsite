@@ -35,13 +35,15 @@
                 document.title = titleEl.dataset[lang];
             }
         };
-        const saved = localStorage.getItem(STORAGE_KEY) || 'nl';
+        // Geblokkeerde opslag (bijv. alle cookies uit) mag de rest van dit script niet stoppen.
+        let saved = 'nl';
+        try { saved = localStorage.getItem(STORAGE_KEY) || 'nl'; } catch (e) { /* taalkeuze geldt dan per pagina */ }
         applyLang(saved);
         langToggle.addEventListener('click', (e) => {
             const btn = e.target.closest('.lang-opt');
             if (!btn) return;
             const lang = btn.dataset.lang;
-            localStorage.setItem(STORAGE_KEY, lang);
+            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* zie boven */ }
             applyLang(lang);
         });
     }
@@ -183,10 +185,13 @@
                 body: new FormData(contactForm),
                 headers: { Accept: 'application/json' }
             })
-                .then(r => r.json())
-                .then(res => {
-                    if (!res.success) throw new Error(res.message || 'mislukt');
+                .then(r => r.json().then(res => ({ ok: r.ok, res })))
+                .then(({ ok, res }) => {
+                    // Alleen een echte bevestiging telt: HTTP 2xx en letterlijk success === true.
+                    // Een 500 met success erin, of success als tekst, is een fout.
+                    if (!(ok && res && res.success === true)) throw new Error((res && res.message) || 'mislukt');
                     contactForm.classList.add('is-submitted');
+                    if (window.woodlerFormConversie) window.woodlerFormConversie();
                     if (success) {
                         success.hidden = false;
                         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
